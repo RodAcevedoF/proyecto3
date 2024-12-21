@@ -1,0 +1,298 @@
+.create {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.create aside {
+    width: 4em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 5.2em;
+    border: 1px solid var(--border-grey);
+}
+
+.aside-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 2em 1em;
+    border-bottom: 1px solid var(--border-grey);
+}
+
+.create aside img {
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+.create article {
+    display: flex;
+    padding: 1em 5em;
+    margin-left: 4em;
+    margin-top: 3em;
+    width: 100%;
+    height: 100%;
+    flex-flow: column wrap;
+}
+
+.create article h2 {
+    border: 1px solid var(--border-grey);
+    padding: 1em;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 3.45em;
+    left: 2.65em;
+}
+
+#upload-form {
+    display: flex;
+    flex-flow: row wrap ;
+    width: 100%;
+    height: 100%;
+    gap: 5em;
+    padding-top: 4em;
+    padding-bottom: 3em;
+    justify-content: center;
+}
+
+ .upload-div {
+    border: 2px dotted var(--border-grey);
+    max-width: 30%;
+    min-width: 20em;
+    height: 28em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2em;
+    overflow: hidden;
+    background-color: var(--upload-grey);
+    cursor: pointer;
+}
+
+.upload-div input[type="file"] {
+    display: none; 
+}
+
+.upload-div label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    justify-content: flex-end;
+    font-size: 1em;
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+}
+
+.upload-div img {
+    width: 2.5em;
+    background-color: inherit;
+}
+
+.upload-div span {
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    padding: 1em;
+    background-color: inherit;
+    margin-bottom: 6em;    
+}
+
+.upload-div span:last-child {
+    font-size: 0.9em;
+    font-weight: 200;
+    margin-bottom: 0;
+}
+
+.info-div {
+    max-width: 50%;
+    min-width: 30em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.info-div input {
+    border-radius: 1em;
+    padding: 0.5em;
+    border: 1px solid var(--border-grey);
+}
+.info-div textarea {
+    border-radius: 1em;
+    padding: 1em;
+    border: 1px solid var(--border-grey) 
+}
+
+.info-div label {
+    font-size: 0.8em;
+}
+
+.create p {
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+.info-div button {
+    border: none;
+    width: 9em;
+    padding: 0.4em;
+    justify-self: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.more-opts {
+    margin-top: 1em;
+    max-height: 0; 
+    opacity: 0; 
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    flex-direction: column;
+}
+
+.more-opts.drop-options {
+    display: block;
+    max-height: 20em; 
+    opacity: 1; 
+}
+
+.more-options {
+    width: 51px;
+    height: 31px;
+    position: relative;
+    margin-bottom: 1em; 
+}
+
+.more-options p {
+    font-size: 1em;
+    top: 0.25em;
+    left: 2em;
+    position: absolute;
+    width: 15em;
+    display: block;
+    background: none;
+    margin-bottom: 1em;
+}
+
+.warning {
+    text-align: start;
+    padding: 1em 0;
+}
+    
+    /* Hide default HTML checkbox */
+.checkbox {
+    opacity: 0;
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+    
+.switch {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: var(--cards-grey);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+    
+.slider {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    left: calc(50% - 27px/2 - 10px);
+    top: calc(50% - 27px/2);
+    border-radius: 50%;
+    background: var(--back-color);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+    
+.checkbox:checked + .switch {
+    background-color: var(--red-general);
+}
+    
+.checkbox:checked + .switch .slider {
+    left: calc(50% - 27px/2 + 10px);
+    top: calc(50% - 27px/2);
+}
+
+#send {
+    background-color: var(--red-general);
+    color: var(--back-color);
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 2em;
+    width: 10em;
+    cursor: pointer;
+    transition: all 0.25s ease-in;
+    border: none;
+}
+
+#send:hover {
+    filter: brightness(1.2);
+}
+  
+@media screen and (max-width: 768px) {
+    .create article {
+        padding: 0;
+        width: 81%;
+        margin-left: 5em;
+    }
+    
+    #upload-form {
+        gap: 3em;
+    }
+
+    .upload-div {
+      min-width: 22em;
+      height: 24em;
+    }
+
+    .info-div {
+      min-width: 22em;
+    }
+}
+
+@media screen and (max-width: 431px) {
+    .create aside {
+        width: 2.5em;
+        top: 4.6em
+    }
+
+    .create article h2 {
+        padding: 0.3em;
+        top: 3.05em;
+        left: 1.65em;
+    }
+    
+    .create article{
+      margin-left: 2.5em;
+      margin-top: 2.5em;
+      width: 88%;
+    }
+
+    .upload-div {
+        min-width: 17em;
+        height: 20em;
+    }
+    .info-div {
+        min-width: 17em;
+    }
+
+    .upload-div span:first-of-type {
+        margin-bottom: 2.5em;
+    }
+}

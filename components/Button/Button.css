@@ -1,0 +1,26 @@
+.btn {
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0.5em;  
+    cursor: pointer;
+}
+
+.btn img {
+    width: 3em;
+    height: 3em;
+    padding: 0.5em;
+    object-fit: cover;
+    transition: all 0.15s ease-in-out;
+    border-radius: 50%;
+}
+
+.btn img:hover {
+    background-color: rgba(197, 196, 196, 0.43);
+    border: 0.25em solid var(--highlight-border);
+    transform: scale(1.1);
+}

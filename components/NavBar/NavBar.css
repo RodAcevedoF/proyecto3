@@ -1,0 +1,283 @@
+.nav-bar {
+    width: 100%;
+    height: 5.2em;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5em 0.5em;
+    z-index: 6;
+}
+
+.nav-div {
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 0.5em 1em;
+}
+
+.nav-div ul {
+    gap: 1.5em;
+    display: flex;
+}
+
+.nav-div ul li a {
+    color: var(--letter-general);
+    font-weight: 500;
+    border-radius: 1.5em;
+    padding: .6em
+}
+
+.nav-div ul li a.select {
+    color: var(--back-color);
+    background-color: var(--letter-general);
+}
+
+.main-logo {
+    width: 2em;
+    height: 2em;
+}
+
+.logo {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+
+}
+
+.btn-ul {
+    display: flex;
+}
+
+.btn-burger {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    width: 4.5rem;
+    height: 2.8rem;
+    border: 0;
+    background: inherit;
+    gap: 0.7em;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 0.5em;
+    justify-content: center;
+    top: 11em;
+    right: 0;
+}
+
+.btn-burger span {
+    background-color: var(--letter-general);
+    height: 3px;
+    width: 2.6em;
+    border-radius: 5px;
+    transition: all 0.5s;
+    transform-origin: left;
+}
+
+.btn-burger span:first-child.anim-first {
+    transform: rotate(45deg);
+}
+
+.btn-burger span:nth-child(2).anim-mid {
+    opacity: 0;
+}
+
+.btn-burger span:last-child.anim-last {
+    transform: rotate(-45deg);
+}
+
+.burger-ul {
+    display: none;
+    position: fixed;
+    width: 4.5em;
+    top: 13em;
+    right: -6em; 
+    flex-direction: column;
+    border-radius: 0.5em;
+    transition: transform 0.3s ease-in-out, right 0.3s ease-in-out; 
+    transform: translateX(0); 
+}
+
+.burger-ul li {
+    background-color: transparent;
+}
+
+.burger-ul.set {
+    right: 0; 
+    transform: translateX(0); 
+    visibility: visible;
+}
+
+.updates {
+    max-height: 0; 
+    opacity: 0; 
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+    flex-direction: column;
+    position: absolute;
+    width: 18em;
+    height: 30em;
+    top: 6em;
+    right: 1em;
+    padding: 1em;
+    border-radius: 2em;
+    gap: 1em;
+    box-shadow: -6px 27px 78px 15px rgba(0,0,0,0.75);
+}
+
+.updates h3 {
+    font-size: 0.9em;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.updates h4 {
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+}
+
+.updates p {
+    font-size: 0.9em;
+}
+
+.updates .sugg-card {
+    width: 14em;
+}
+
+.updates .sugg-card img{
+    width: 5em;
+    height: 4em;
+    border-radius: 1em;
+
+}
+
+.chats {
+    flex-direction: column;
+    position: absolute;
+    width: 18em;
+    height: 30em;
+    top: 6em;
+    right: 1em;
+    padding: 1em;
+    border-radius: 2em;
+    gap: 2em;
+    box-shadow: -6px 27px 78px 15px rgba(0,0,0,0.75);
+    max-height: 0; 
+    opacity: 0; 
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+}
+
+.chats > div {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.chats > div img{
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.chats > div img:hover {
+    background-color: var(--upload-grey);
+}
+
+.chats ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.chats ul li p {
+    padding: 0;
+    font-weight: 600;
+    background-color: inherit;
+}
+
+.chats ul li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 0.2s ease-in-out;
+    gap: 1em;
+    border-radius: 2em;
+    padding: 0.25em;
+    cursor: pointer;
+}
+
+.chats ul li:hover {
+    background-color: var(--cards-grey);
+}
+
+.chats ul li:nth-child(2) img {
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0.7em;
+    background-color: var(--cards-grey)
+}
+
+.chats ul li div {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    background-color: inherit;
+}
+
+.chats ul li div p {
+    text-align: start;
+}
+
+.chats ul li div p:last-child {
+    font-size: 0.85em;
+    color: var(--border-grey);
+}
+
+.display {
+    display: flex;
+    max-height: 35em; 
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        height: 5em;
+    }
+
+    .btn-ul {
+        display: none;
+    }
+
+    .nav-div, .nav-div ul {
+        gap: 0.5em;
+        padding: 0.25em;
+    }    
+
+    .btn-burger {
+        display: flex;
+    }
+    .burger-ul {
+    display: flex;
+    }
+
+    .updates, .chats {
+        left: 1em;
+    }
+}
+
+@media screen and (max-width: 431px) {
+    .nav-div ul li a {
+        font-size: 0.8em;
+    }
+
+    .nav-bar {
+        height: 4.6em;
+    }
+}
+
+

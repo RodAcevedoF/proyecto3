@@ -1,0 +1,122 @@
+.search {
+    width: 100%;
+    min-width: 300px;
+    height: 5em;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.div-search {
+   width: 100%;
+   flex-direction: column;
+   display: flex;
+   justify-content: center;
+}
+
+#search {
+    width: 100%;
+    height: 3em;
+    border: none;
+    font-size: 1em;
+    border-radius: 2em;
+    padding-left: 2.8em;
+    transition: all 0.1s ease-in-out;
+    outline: none;
+    background-color: rgba(216, 216, 216, 0.686);
+    display: flex;
+    align-self: center;
+}
+
+#search:focus {
+    border: 3px solid var(--highlight-border);
+    outline: none;
+}
+
+#search::-webkit-search-cancel-button {
+    font-size: 1.3em;
+    padding-right: 1em;
+    border-radius: 50%;
+}
+
+#search::placeholder {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out;
+    color: rgb(91, 91, 91);
+    font-weight: 400;
+}
+
+#search:focus::placeholder {
+    opacity: 0.5; 
+    color: var(--highlight-border);
+}
+
+#search-icon {
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 2.1em;
+    background-color: rgba(216, 216, 216, 0.307);
+    left: 1.1em;
+}
+
+.dropdown {
+    height: auto;
+    display: flex;
+    visibility: hidden; 
+    opacity: 0;
+    position: relative;
+    top: 0.2em;
+    padding: 1em 1em;
+    gap: 1em;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    border: 2px solid var(--highlight-border);
+    border-radius: 1em;
+    transform: translateY(-10px); 
+    transition: all 0.15s ease-in-out;
+    z-index: 10;
+}
+
+.show {
+    visibility: visible; 
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.dropdown button {
+    border: none;
+    color: var(--back-color);
+    background-color: var(--letter-general);
+    padding: 1em;
+    border-radius: 2em;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.dropdown button:hover {
+    opacity: 0.8;
+}
+
+select {
+    width: 10em;
+    border: none;
+    padding: 0.5em;
+    outline: none;
+    background-color: rgba(216, 216, 216, 0.307);
+    border-radius: 1em;
+    font-weight: 500;
+}
+
+select option {
+    background-color: rgba(216, 216, 216, 0.566);
+    border: none;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .search {
+        min-width: 120px;
+    }
+}

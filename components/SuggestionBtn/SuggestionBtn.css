@@ -1,0 +1,19 @@
+.sugg-card {
+    display: flex;
+    width: 15em;
+    gap: 1em;
+    align-items: center;
+    border-radius: 2em;
+    background-color: var(--cards-grey);
+    cursor: pointer;
+}
+
+.sugg-card figcaption {
+    text-align: center;
+    background-color: var(--cards-grey);
+    font-weight: 500;
+}
+
+.sugg-card:hover {
+    filter:contrast(0.7)
+}
