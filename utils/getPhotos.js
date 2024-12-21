@@ -51,12 +51,6 @@ export const getPhotos = async (
     const url = `${baseUrl}?${params.toString()}`;
     console.log("URL final:", url);
 
-    const main = document.querySelector(".main-div")
-    main.innerHTML = `<div class="loading">
-                      <h3>Loading...</h2>
-                      <img src="/icons/pinterest.png" alt="pinterest icon">
-                      </div>`;
-
     const response = await fetch(url);
 
     if (!response.ok) {
