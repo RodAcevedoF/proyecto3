@@ -222,7 +222,7 @@
     box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.171);
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
    
     .profile h2 {
         font-size: 1.5em;
@@ -262,7 +262,7 @@
     }
 }
 
-@media screen and (max-width: 430px) {
+@media (max-width: 430px) {
     
     .profile {
         margin-top: 2em;

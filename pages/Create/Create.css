@@ -245,7 +245,7 @@
     filter: brightness(1.2);
 }
   
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .create article {
         padding: 0;
         width: 81%;
@@ -266,7 +266,7 @@
     }
 }
 
-@media screen and (max-width: 431px) {
+@media (max-width: 431px) {
     .create aside {
         width: 2.5em;
         top: 4.6em

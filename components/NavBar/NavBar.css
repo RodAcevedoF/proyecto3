@@ -244,7 +244,7 @@
     opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .nav-bar {
         height: 5em;
     }
@@ -270,7 +270,7 @@
     }
 }
 
-@media screen and (max-width: 431px) {
+@media (max-width: 431px) {
     .nav-div ul li a {
         font-size: 0.8em;
     }
