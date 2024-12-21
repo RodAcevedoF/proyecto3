@@ -228,6 +228,11 @@
         font-size: 1.5em;
     }
 
+    .div-btns {
+        width:14em;
+        border: 1px solid red
+    }
+
     .user-btn div p:first-of-type {
         font-size: 1em;
     }
@@ -273,20 +278,25 @@
     }
 
     .profile h2 {
-        font-size: 1em;
-        width: 15em;
+        font-size: 0.9em;
+        width: 10em;   
+    }
+
+    .div-btns{
+        gap: 0;
+        width: 11em;
     }
 
     .user-btn div p:first-of-type {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
     
     .user-btn div p:last-of-type {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 
     .user-btn img {
-        width: 2em;
+        width: 1.8em;
     }
 
     .profile-btn {
