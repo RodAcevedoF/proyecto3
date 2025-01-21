@@ -131,7 +131,7 @@ export const dropMenus = () => {
 
   [notifications, notificationsB].forEach((element) => {
     element.addEventListener("click", (ev) => {
-      ev.stopPropagation();
+      ev.stopPropagation(); 
       toggleMenu(updates, messages);
     });
   });

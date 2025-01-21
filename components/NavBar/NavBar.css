@@ -56,7 +56,7 @@
     position: fixed;
     display: none;
     flex-direction: column;
-    width: 4.5rem;
+    width: 3.8rem;
     height: 2.8rem;
     border: 0;
     background: inherit;
@@ -66,7 +66,8 @@
     border-radius: 0.5em;
     justify-content: center;
     top: 11em;
-    right: 0;
+    left: 0;
+    padding-left: 15px;
 }
 
 .btn-burger span {
@@ -93,13 +94,14 @@
 .burger-ul {
     display: none;
     position: fixed;
-    width: 4.5em;
+    width: 3.8em;
     top: 13em;
-    right: -6em; 
+    left: -6em; 
+    padding-left: .3em;
     flex-direction: column;
     border-radius: 0.5em;
-    transition: transform 0.3s ease-in-out, right 0.3s ease-in-out; 
-    transform: translateX(0); 
+    transition: transform 0.3s ease-in-out, left 0.3s ease-in-out; 
+    transform: translateX(-5em); 
 }
 
 .burger-ul li {
@@ -107,7 +109,7 @@
 }
 
 .burger-ul.set {
-    right: 0; 
+    left: 0; 
     transform: translateX(0); 
     visibility: visible;
 }

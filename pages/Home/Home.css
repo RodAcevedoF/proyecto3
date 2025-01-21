@@ -192,6 +192,20 @@
     pointer-events: auto; 
 }
 
+.loading-gif {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none; /* Oculto por defecto */
+  }
+  
+  .loading-gif img {
+    width: 200px;
+    height: 200px;
+  }  
+
 @media (max-width: 768px) {
     .inner-div img.closeup {
         width: 62vw;

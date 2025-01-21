@@ -66,18 +66,18 @@ export const initSearch = () => {
         const suggestion = e.target.textContent;
         inputElem.value = suggestion;
         suggestionsElem.innerHTML = "";
+        dropMenu.classList.remove("show");
         getPhotos(suggestion);
         changePage(Home);
-        dropMenu.classList.remove("show");
       }
     });
   }
 
-  searchForm.addEventListener("click", () => {
-    changePage(Home);
+  searchForm.addEventListener("click", (event) => {
+    event.stopPropagation();
+    dropMenu.classList.add("show");
     updates.classList.remove("display");
     chats.classList.remove("display");
-    dropMenu.classList.add("show");
     burgerUl.classList.remove("set");
     firstSpan.classList.remove("anim-first");
     midSpan.classList.remove("anim-mid");
@@ -90,10 +90,32 @@ export const initSearch = () => {
   });
 
   document.addEventListener("click", (event) => {
-    if (!searchForm.contains(event.target)) {
+    if (
+      !searchForm.contains(event.target) &&
+      !dropMenu.contains(event.target)
+    ) {
       dropMenu.classList.remove("show");
     }
   });
+
+  const notifications = document.getElementById("notifications");
+  const chat = document.getElementById("chats");
+
+  if (notifications) {
+    notifications.addEventListener("click", (event) => {
+      event.stopPropagation();
+      dropMenu.classList.remove("show");
+      console.log("Notificaciones");
+    });
+  }
+
+  if (chat) {
+    chat.addEventListener("click", (event) => {
+      event.stopPropagation();
+      dropMenu.classList.remove("show");
+      console.log("Chat");
+    });
+  }
 
   searchForm.addEventListener("submit", (ev) => {
     ev.preventDefault();
