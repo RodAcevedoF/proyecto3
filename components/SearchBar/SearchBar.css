@@ -85,6 +85,33 @@
     transform: translateY(0); 
 }
 
+#suggestions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    gap: 0.25em;
+    transition: all 0.25em ease-in-out;
+    background-color: var(--lightest-grey);
+    border-radius: 1em;
+}
+
+#suggestions li {
+    cursor: pointer;
+    background-color: inherit;
+    border-radius: 1em;
+    width: 100%;
+    padding: .5em;
+    font-weight: 500;
+    color: var(--letter-grey);
+    transition: all .25s ease-in-out;
+}
+
+#suggestions li:hover {
+    background-color: var(--letter-general);
+    color: var(--back-color)
+}
+
 .dropdown button {
     border: none;
     color: var(--back-color);
@@ -120,3 +147,14 @@ select option {
         min-width: 120px;
     }
 }
+
+@media (max-width: 430px) {
+    .dropdown {
+        width: 90vw;
+        left: 50%;
+        top: 4.6em;
+        transform: translateX(-50%); 
+        position: fixed; 
+    }
+}
+

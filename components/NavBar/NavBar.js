@@ -1,11 +1,12 @@
 import "./NavBar.css";
-import { SearchBar, initSearch } from "../SearchBar/SearchBar";
+import { SearchBar } from "../SearchBar/SearchBar";
 import { Button } from "../Button/Button";
 import { SuggestionBtn } from "../SuggestionBtn/SuggestionBtn";
 import { suggestionsB } from "../../data/suggestions";
 import { getPhotos } from "../../utils/getPhotos";
 import { Home } from "../../pages/Home/Home";
 import { changePage } from "../../utils/changePage";
+import { initSearch } from "../../utils/initSearch";
 
 export const NavBar = () => {
   const header = document.querySelector("header");

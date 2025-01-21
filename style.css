@@ -13,7 +13,9 @@
     --highlight-border: cornflowerblue;
     --back-color: whitesmoke;
     --letter-general: black;
+    --letter-grey: rgb(84, 84, 84);
     --cards-grey: rgb(223, 223, 223);
+    --lightest-grey: rgba(223, 223, 223, 0.592);
     --upload-grey: rgb(204, 204, 204);
     --border-grey: #afafaf;
     --red-general: #b60620;

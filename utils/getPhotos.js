@@ -1,4 +1,4 @@
-import { stylePhotos } from "../pages/Home/Home";
+import { stylePhotos } from "./stylePhotos";
 
 const ACCESS_KEY = "qrylhW3FAl4ecO6J5YJmCNHr1jKurFrLIxWTjhYL4XQ";
 
