@@ -50,9 +50,16 @@ export const initSearch = () => {
     };
 
     const renderSuggestions = (suggestions) => {
+      const maxLength = 80;
       suggestionsElem.innerHTML = suggestions
-        .map((suggestion) => `<li class="suggestion-item">${suggestion}</li>`)
-        .join("");
+        .map((suggestion) => {
+          const truncatedText =
+            suggestion.length > maxLength
+              ? suggestion.substring(0, maxLength) + '...'
+              : suggestion;
+          return `<li class="suggestion-item">${truncatedText}</li>`;
+        })
+        .join('');
     };
 
     inputElem.addEventListener("input", (e) => {
@@ -68,13 +75,13 @@ export const initSearch = () => {
         suggestionsElem.innerHTML = "";
         dropMenu.classList.remove("show");
         getPhotos(suggestion);
-        changePage(Home);
       }
     });
   }
 
   searchForm.addEventListener("click", (event) => {
     event.stopPropagation();
+    changePage(Home);
     dropMenu.classList.add("show");
     updates.classList.remove("display");
     chats.classList.remove("display");
