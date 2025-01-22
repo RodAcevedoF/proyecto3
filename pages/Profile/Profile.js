@@ -51,11 +51,10 @@ export const Profile = () => {
   const profileBtn = document.querySelector('.profile-btn');
   const userBtnImg = document.querySelector('.user-btn img');
 
-  // Elementos del navbar
+
   const navbarProfile = document.getElementById('profile');
   const navbarProfileB = document.getElementById('profileB');
 
-  // Actualizar imágenes desde localStorage
   const updateNavbarImages = () => {
     const storedImage = localStorage.getItem('profileImage') || '/icons/user.png';
     userBtnImg.src = storedImage;
@@ -73,20 +72,18 @@ export const Profile = () => {
 
   updateNavbarImages();
 
-  // Event listener para abrir el selector de archivos
   profileBtn.addEventListener('click', () => {
     fileInput.click();
   });
 
-  // Event listener para manejar la carga de la imagen
   fileInput.addEventListener('change', (event) => {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
-        const base64Image = reader.result; // Imagen convertida a Base64
-        localStorage.setItem('profileImage', base64Image); // Guardar en localStorage
-        updateNavbarImages(); // Actualizar todas las imágenes
+        const base64Image = reader.result;
+        localStorage.setItem('profileImage', base64Image); 
+        updateNavbarImages(); 
       };
       reader.readAsDataURL(file);
     }
